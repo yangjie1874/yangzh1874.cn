@@ -1,25 +1,27 @@
 baseURL = "https://yangzh1874.cn/"
-languageCode = "zh-cn"
-title = "My Research"
-theme = "PaperMod"
-
-[params]
-    defaultTheme = "auto"
-    # 你的简介
-    homeInfoParams.Title = "Hi there 👋"
-    homeInfoParams.Content = "Focus on Computer Vision & AI in Agriculture."
-
-    [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/yourname"
+title = "Yang's AI Lab"
+theme = "FixIt"
+languageCode = "zh-CN"
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    identifier = "home"
+    name = "首页"
     url = "/"
     weight = 1
-  # 这里对应你想要的 Datasets 页面
   [[menu.main]]
+    identifier = "datasets"
     name = "Datasets"
     url = "/Datasets-and-benchmark-code/"
     weight = 2
+
+[params]
+  # 适配你下载的最新版主题
+  version = "0.3.X"
+  
+  # 开启个人资料（精简版，防止参数报错）
+  [params.home.profile]
+    enable = true
+    avatarURL = "https://github.com/yangjie1874.png"
+    title = "Yang"
+    subtitle = "CV & AI Research"
