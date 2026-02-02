@@ -1,0 +1,25 @@
+baseURL = "https://yangzh1874.cn/"
+languageCode = "zh-cn"
+title = "My Research"
+theme = "PaperMod"
+
+[params]
+    defaultTheme = "auto"
+    # 你的简介
+    homeInfoParams.Title = "Hi there 👋"
+    homeInfoParams.Content = "Focus on Computer Vision & AI in Agriculture."
+
+    [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/yourname"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  # 这里对应你想要的 Datasets 页面
+  [[menu.main]]
+    name = "Datasets"
+    url = "/Datasets-and-benchmark-code/"
+    weight = 2
