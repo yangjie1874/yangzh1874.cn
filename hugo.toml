@@ -1,27 +1,122 @@
 baseURL = "https://yangzh1874.cn/"
-title = "Yang's AI Lab"
+title = "Yang's Space"
 theme = "FixIt"
-languageCode = "zh-CN"
+defaultContentLanguage = "zh-cn"
 
-[menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "首页"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    identifier = "datasets"
-    name = "Datasets"
-    url = "/Datasets-and-benchmark-code/"
-    weight = 2
-
+disableBrowserLanguage = true
+defaultContentLanguageInSubdir = false  # 默认语言不使用子目录
 [params]
-  # 适配你下载的最新版主题
   version = "0.3.X"
-  
-  # 开启个人资料（精简版，防止参数报错）
+  favicon = "/favicon.ico"
   [params.home.profile]
-    enable = true
-    avatarURL = "https://github.com/yangjie1874.png"
-    title = "Yang"
-    subtitle = "CV & AI Research"
+    enable = false
+  [params.social]
+    [params.social.github]
+      id = "yangjie1874"
+      weight = 1
+  [params.header]
+    themeChangeMode = "" 
+    [params.header.title]
+      name = "Yang Zh's Homepage"
+
+# --- 多语言设置 ---
+# ... (前面的配置保持不变) ...
+
+# --- 多语言设置 (修改了最后的切换按钮) ---
+[languages]
+
+  # ==========================================
+  # 1. 中文版配置
+  # ==========================================
+  [languages.zh-cn]
+    weight = 1
+    languageName = "简"
+    title = "Yang Zh's AI Space"
+    
+    # ... (前面的简介、教育、研究、项目、爱好菜单项保持不变，请确保它们还在) ...
+    # 只需要找到并替换最后一个 [[languages.zh-cn.menu.main]] 即可：
+
+    [[languages.zh-cn.menu.main]]
+      identifier = "profile"
+      name = "个人简介"
+      url = "#profile"
+      weight = 1
+    [[languages.zh-cn.menu.main]]
+      identifier = "education"
+      name = "教育经历"
+      url = "#education"
+      weight = 2
+    [[languages.zh-cn.menu.main]]
+      identifier = "research"
+      name = "研究成果"
+      url = "#research"
+      weight = 3
+    [[languages.zh-cn.menu.main]]
+      identifier = "projects"
+      name = "项目经历"
+      url = "#projects"
+      weight = 4
+    [[languages.zh-cn.menu.main]]
+      identifier = "hobbies"
+      name = "兴趣爱好"
+      url = "#hobbies"
+      weight = 5
+
+    # 【这里是修改重点：切换按钮】
+    [[languages.zh-cn.menu.main]]
+      identifier = "switch-to-en"
+      name = " "   # 留空，不显示文字
+      # 使用 FontAwesome 的语言图标，垂直居中，稍微调大一点
+      pre = '<i class="fa-solid fa-language" style="font-size: 1.1rem; vertical-align: -3px;"></i>'
+      url = "/en/"
+      weight = 6
+
+  # ==========================================
+  # 2. 英文版配置
+  # ==========================================
+  [languages.en]
+    weight = 2
+    languageName = "En"
+    title = "Yang Zh's AI Space"
+    
+    # ... (前面的 Profile, Education 等菜单保持不变) ...
+    
+    [[languages.en.menu.main]]
+      identifier = "profile"
+      name = "Profile"
+      url = "#profile"
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "education"
+      name = "Education"
+      url = "#education"
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "research"
+      name = "Research"
+      url = "#research"
+      weight = 3
+    [[languages.en.menu.main]]
+      identifier = "projects"
+      name = "Projects"
+      url = "#projects"
+      weight = 4
+    [[languages.en.menu.main]]
+      identifier = "hobbies"
+      name = "Lifestyle"
+      url = "#hobbies"
+      weight = 5
+
+    # 【这里是修改重点：切换按钮】
+    [[languages.en.menu.main]]
+      identifier = "switch-to-cn"
+      name = " "   # 留空
+      # 同样的图标
+      pre = '<i class="fa-solid fa-language" style="font-size: 1.5rem; vertical-align: -3px;"></i>'
+      url = "/"
+      weight = 6
+# 允许 HTML 渲染
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

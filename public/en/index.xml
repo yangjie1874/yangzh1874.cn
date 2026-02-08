@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yang Zh&#39;s AI Space</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:1313/en/</link>
     <description>Yang Zh&#39;s AI Space</description>
     <generator>Hugo 0.155.1 &amp; FixIt v0.4.3-20260130042349-e23a50d7</generator>
-    <language>zh-cn</language>
+    <language>en</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
